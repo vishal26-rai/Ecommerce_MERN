@@ -83,7 +83,7 @@ const App = () => {
           {/*Admin Routes*/}
           <Route
           element={
-            <ProtectedRoute isAuthenticated={true} adminOnly={true} admin = {user?.role == "admin"? true: false} />
+            <ProtectedRoute isAuthenticated={true} adminOnly={true} admin = {user?.role === "admin"? true: false} />
           }
           >
             <Route path="/admin/dashboard" element={<Dashboard />} />
